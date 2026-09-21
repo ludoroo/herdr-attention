@@ -22,13 +22,6 @@ herdr plugin action invoke ludoroo.attention.activate
 
 The activation command applies the view immediately to a running Herdr server. On later server starts, the plugin applies it automatically and retries briefly while Herdr's API socket becomes ready.
 
-This repository is private. Configure GitHub HTTPS authentication before installation if needed:
-
-```sh
-gh auth login --hostname github.com --git-protocol https
-gh auth setup-git
-```
-
 ## Actions
 
 ```sh
