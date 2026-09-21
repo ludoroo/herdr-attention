@@ -1,0 +1,23 @@
+id = "ludoroo.attention"
+name = "Attention View"
+version = "0.1.0"
+min_herdr_version = "0.9.0"
+description = "Show blocked and unseen completed agents as a prioritized navigation view."
+platforms = ["linux", "macos"]
+
+[[startup]]
+command = ["node", "src/sync-view.mjs"]
+
+[[actions]]
+id = "activate"
+title = "Attention View: activate"
+description = "Show agents that are blocked or completed and not yet seen"
+contexts = ["global"]
+command = ["node", "src/sync-view.mjs"]
+
+[[actions]]
+id = "deactivate"
+title = "Attention View: deactivate"
+description = "Restore Herdr's unfiltered agent view"
+contexts = ["global"]
+command = ["node", "src/clear-view.mjs"]
